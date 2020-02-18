@@ -14,7 +14,7 @@ yarn install
 
 yarn lerna run build
 
-yarn storybook:start
+yarn start
 ```
 
 Storybook will automatically open a page in your default browser.

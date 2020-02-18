@@ -8,8 +8,9 @@ import './mini-weather-card';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const readme = require('../README.md');
 
+const TEMPERATURES = [4, 8, 15, 16, 23, 42];
 const COLORS = ['dark', 'primary', 'secondary', 'success', 'warning', 'danger'];
-const ICONS = ['sun', 'rain', 'snow', 'cloudy'];
+const ICONS = ['sun', 'rain', 'snow', 'cloudy', 'storm', 'cloudy_night'];
 const UNITS = ['°', '°C', '°F'];
 
 export default {
@@ -42,7 +43,7 @@ export const defaultStory = storyBuilder(() => {
   const icon = select('icon', ICONS, 'rain');
   const unit = select('unit', UNITS, '°');
   return html`
-    <mini-weather-card value=${value} unit=${unit} color=${color} icon=${icon} label=${label}></mini-weather-card>
+    <mini-weather-card temperature=${value} unit=${unit} color=${color} icon=${icon} label=${label}></mini-weather-card>
   `;
 })
   .withName('Default')
@@ -51,9 +52,15 @@ export const defaultStory = storyBuilder(() => {
 export const colorStory = storyBuilder(() => {
   return html`
     ${COLORS.map(
-      color =>
+      (color, index) =>
         html`
-          <mini-weather-card value="42" unit="°" color=${color} icon="rain" label=${color}></mini-weather-card>
+          <mini-weather-card
+            temperature=${TEMPERATURES[index % TEMPERATURES.length]}
+            unit="°"
+            color=${color}
+            icon="rain"
+            label=${color}
+          ></mini-weather-card>
         `,
     )}
   `;
@@ -64,10 +71,15 @@ export const colorStory = storyBuilder(() => {
 
 export const iconStory = storyBuilder(() => {
   return html`
-    ${['sun', 'rain', 'snow', 'cloudy'].map(
-      icon =>
+    ${ICONS.map(
+      (icon, index) =>
         html`
-          <mini-weather-card value="42" unit="°" icon=${icon} label=${icon}></mini-weather-card>
+          <mini-weather-card
+            temperature=${TEMPERATURES[index % TEMPERATURES.length]}
+            unit="°"
+            icon=${icon}
+            label=${icon}
+          ></mini-weather-card>
         `,
     )}
   `;

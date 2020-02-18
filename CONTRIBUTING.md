@@ -24,13 +24,19 @@ type(scope?): subject  #scope is optional
 
 Real world examples can look like this:
 
+A fix
+
 ```commit
 fix(my-component-package-name): fix typo in package REAME.md
-```s
+```
+
+A new feature
 
 ```commit
 feat(my-component-package-name): add XXX
 ```
+
+A breaking change
 
 ```commit
 feat(my-component-package-name): refactor XXX component

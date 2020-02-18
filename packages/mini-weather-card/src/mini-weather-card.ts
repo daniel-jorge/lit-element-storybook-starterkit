@@ -3,9 +3,9 @@ import { customElement, html, property, CSSResult, css, LitElement } from 'lit-e
 import * as icons from './icons';
 
 /**
- * A numeric Key Point Indicator with icon and unit.
+ * A mini weather component with icon, temperature and unit.
  *
- * The weather icon was made by <a href="https://www.flaticon.com/authors/prosymbols" title="Prosymbols">Prosymbols</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+ * The weather icons were made by <a href="https://www.flaticon.com/authors/prosymbols" title="Prosymbols">Prosymbols</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
  *
  * The component has a max width of 280px.
  */
@@ -36,10 +36,10 @@ class NumericKpiWidget extends LitElement {
   @property({ type: String })
   icon = '';
   /**
-   * The value of the kpi
+   * The temperature value
    */
   @property({ type: Number })
-  value = 0;
+  temperature = 0;
 
   static get styles(): CSSResult[] {
     return [
@@ -93,7 +93,7 @@ class NumericKpiWidget extends LitElement {
         <div>
           <span class="label">${this.label}</span>
           <br />
-          <span class="value">${this.value}</span>
+          <span class="value">${this.temperature}</span>
           <span class="unit">${this.unit}</span>
         </div>
       </div>
