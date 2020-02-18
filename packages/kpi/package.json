@@ -1,0 +1,27 @@
+{
+  "name": "@crz/mini-weather-card",
+  "version": "0.0.1",
+  "author": "Daniel Jorge <dani2013@gmail.com>",
+  "description": "",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf ./dist && rollup -c",
+    "test": "jest"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "../../.jest/setup.ts"
+    ],
+    "preset": "ts-jest",
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy"
+    }
+  }
+}

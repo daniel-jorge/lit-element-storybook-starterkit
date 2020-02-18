@@ -1,0 +1,16 @@
+{
+  "version": "independent",
+  "packages": [
+    "packages/*"
+  ],
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "registry": "<YOUR_PRIVATE_REGISTRY>",
+      "conventionalCommits": true,
+      "message": "chore: publish",
+      "allowBranch": "master"
+    }
+  }
+}

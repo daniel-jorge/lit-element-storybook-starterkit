@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "target": "es5"
+  },
+  "exclude": [
+    ".vscode",
+    "dist",
+    "plop-templates",
+    "storybook-static",
+    "node_modules"
+  ],
+  "files": [
+    "./typings.d.ts"
+  ],
+  "include": [
+    "packages/**/*",
+    "utils/**/*"
+  ]
+}
