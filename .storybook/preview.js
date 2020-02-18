@@ -16,7 +16,7 @@ addDecorator(
 );
 
 const ROOT_ORDER = ['introduction', 'documentations', 'components'];
-const INTRODUCTION_ORDER = ['readme', 'changelog', 'contributing'];
+const INTRODUCTION_ORDER = ['readme', 'changelog', 'contributing', 'todo'];
 
 addParameters({
   options: {
@@ -31,9 +31,9 @@ addParameters({
       const [bRoot, bSection] = b[0].split('-');
       if (aRoot === bRoot) {
         if (aRoot === 'introduction') {
-          const aIdx = INTRODUCTION_ORDER.indexOf(aRoot);
-          const bIdx = INTRODUCTION_ORDER.indexOf(bRoot);
-          return aIdx > bIdx ? -1 : 1;
+          const aIdx = INTRODUCTION_ORDER.indexOf(aSection);
+          const bIdx = INTRODUCTION_ORDER.indexOf(bSection);
+          return aIdx > bIdx ? 1 : -1;
         }
         return aSection === bSection ? 0 : aSection.localeCompare(bSection, undefined, { numeric: true });
       }
