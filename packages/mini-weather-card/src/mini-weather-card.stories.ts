@@ -18,6 +18,7 @@ export default {
   component: 'mini-weather-card',
   parameters: {
     notes: readme,
+    jest: ['mini-weather-card.test.ts'],
   },
 };
 
