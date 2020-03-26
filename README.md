@@ -23,7 +23,7 @@ Storybook will automatically open a page in your default browser.
 
 | Script                  | Description                                                                                         |
 | ----------------------- | --------------------------------------------------------------------------------------------------- |
-| `yarn start`  | Starts the storybook development environment.<br />[http://localhost:9009/](http://localhost:9009/) |
+| `yarn start`            | Starts the storybook development environment.<br />[http://localhost:9009/](http://localhost:9009/) |
 | `yarn storybook:build`  | Builds the storybook static site.                                                                   |
 | `yarn storybook:deploy` | Builds and deploys the storybook static site to github pages.                                       |
 | `yarn publish:release`  | Releases a new version of the libraries.<br />**This command can only be run from master.**         |
