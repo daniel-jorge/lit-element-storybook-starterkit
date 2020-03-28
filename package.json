@@ -21,6 +21,8 @@
     "gen:docs": "wca analyze packages/** --format markdown --outDir .gen",
     "gen:docs-json": "wca analyze packages/** --outFile .gen/custom-elements.json ",
     "test": "jest",
+    "lint": "eslint --ext .ts,.tsx,.js,.jsx ./packages",
+    "typecheck": "tsc --noEmit",
     "diff": "lerna diff",
     "new-version": "lerna version --conventional-commits --yes"
   },
