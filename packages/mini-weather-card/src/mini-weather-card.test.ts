@@ -18,18 +18,18 @@ describe('<mini-weather-card />', () => {
   it('should render unit', async () => {
     TestUtils.render('<mini-weather-card unit="UNIT_VALUE" />');
     const miniWeatherCard = await TestUtils.waitForElement('mini-weather-card');
-    expect(miniWeatherCard.shadowRoot.innerHTML).toMatch(/UNIT_VALUE/);
+    expect(miniWeatherCard.shadowRoot!.innerHTML).toMatch(/UNIT_VALUE/);
   });
 
   it('should render label', async () => {
     TestUtils.render('<mini-weather-card unit="LABEL_VALUE" />');
     const miniWeatherCard = await TestUtils.waitForElement('mini-weather-card');
-    expect(miniWeatherCard.shadowRoot.innerHTML).toMatch(/LABEL_VALUE/);
+    expect(miniWeatherCard.shadowRoot!.innerHTML).toMatch(/LABEL_VALUE/);
   });
 
   it('should render temperature', async () => {
     TestUtils.render('<mini-weather-card unit="TEMPERATURE_VALUE" />');
     const miniWeatherCard = await TestUtils.waitForElement('mini-weather-card');
-    expect(miniWeatherCard.shadowRoot.innerHTML).toMatch(/TEMPERATURE_VALUE/);
+    expect(miniWeatherCard.shadowRoot!.innerHTML).toMatch(/TEMPERATURE_VALUE/);
   });
 });

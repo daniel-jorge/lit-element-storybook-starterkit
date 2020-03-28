@@ -1,4 +1,4 @@
-import { customElement, html, property, CSSResult, css, LitElement } from 'lit-element';
+import { customElement, html, property, CSSResult, css, LitElement, TemplateResult } from 'lit-element';
 
 import * as icons from './icons';
 
@@ -81,6 +81,7 @@ class NumericKpiWidget extends LitElement {
 
   render() {
     const bgColor = `bg-${this.color}`;
+    const iconElement = (icons as { [key: string]: TemplateResult })[this.icon];
     return html`
       <link
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -89,7 +90,7 @@ class NumericKpiWidget extends LitElement {
         crossorigin="anonymous"
       />
       <div class="d-flex p-3 justify-content-center align-items-center ${bgColor} rounded shadow">
-        <div class="icon">${icons[this.icon]}</div>
+        <div class="icon">${iconElement}</div>
         <div>
           <span class="label">${this.label}</span>
           <br />

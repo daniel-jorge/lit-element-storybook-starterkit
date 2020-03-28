@@ -1,3 +1,4 @@
+import { StoryFn } from '@storybook/addons';
 import { text, select } from '@storybook/addon-knobs';
 import { html } from 'lit-html';
 
@@ -22,7 +23,7 @@ export default {
   },
 };
 
-const containerDecorator = storyFn => html`
+const containerDecorator = (storyFn: StoryFn) => html`
   <style>
     .container {
       display: flex;
